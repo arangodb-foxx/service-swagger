@@ -25,7 +25,7 @@ ctrl.get('/swagger.json', function (req, res) {
       title: app._manifest.name,
       license: app._manifest.license && {name: app._manifest.license}
     },
-    host: getHost(req),
+    host: req.headers.host,
     basePath: app._mount,
     schemes: [req.protocol],
     paths: swagger.paths,
@@ -59,13 +59,6 @@ function fixSchema(model) {
 
 function swaggerifyPath(path) {
   return path.replace(/(?::)([^\/]*)/g, '{$1}');
-}
-
-function getHost(req) {
-  return (
-    (req.protocol === 'http' && req.server.port === '80') ||
-    (req.protocol === 'https' && req.server.port === '443')
-  ) ? req.server.address : req.server.address + ':' + req.server.port;
 }
 
 function parseRoutes(tag, routes, models) {
