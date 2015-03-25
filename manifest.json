@@ -2,7 +2,7 @@
   "name": "swagger",
   "description": "API documentation browser app for Foxx apps.",
   "author": "ArangoDB GmbH",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "Apache License, Version 2.0",
   "isSystem": true,
   "repository": {
