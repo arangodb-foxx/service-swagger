@@ -1,0 +1,39 @@
+{
+  "name": "swagger",
+  "description": "API documentation browser app for Foxx apps.",
+  "author": "ArangoDB GmbH",
+  "version": "1.0.0",
+  "license": "Apache License, Version 2.0",
+  "isSystem": true,
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arangodb/foxx-swagger.git"
+  },
+
+  "contributors": [
+    {
+      "name": "Alan Plum",
+      "email": "me@pluma.io"
+    }
+  ],
+
+  "controllers": {
+    "/": "api.js"
+  },
+
+  "files": {
+    "/": "swagger-ui"
+  },
+
+  "lib": ".",
+
+  "configuration": {
+    "appPath": {
+      "type": "string",
+      "default": "/_admin/aardvark",
+      "description": "Mount point of the app for which documentation will be generated."
+    }
+  }
+}
+
