@@ -25,8 +25,7 @@ ctrl.get('/swagger.json', function (req, res) {
       title: app._manifest.name,
       license: app._manifest.license && {name: app._manifest.license}
     },
-    host: req.headers.host,
-    basePath: app._mount,
+    basePath: '/_db/' + encodeURIComponent(req.database) + app._mount,
     schemes: [req.protocol],
     paths: swagger.paths,
     // securityDefinitions: {},
