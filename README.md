@@ -4,9 +4,11 @@ The API documentation browser provides a standalone implementation of the genera
 
 Note that apps can be mounted inside of each other, so if you want to make documentation for an app mounted at `/my-foxx-app` available on a sub-path, you could mount this app at `/my-foxx-app/docs`.
 
+**Warning**: as of ArangoDB 2.6 it is possible to mount API documentation directly inside an app using the *apiDocumentation* controller method, eliminating the use case this app was created for. You can still use this app if you want to mount the documentation of a third-party app without writing any code, of course.
+
 ## Configuration
 
-This app has the following configuration opReverb Technologies, Inc.tion:
+This app has the following configuration option:
 
 * *appPath*: Mount point of the app for which documentation will be generated. Example: `/_admin/aardvark`.
 
